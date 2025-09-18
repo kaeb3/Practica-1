@@ -25,9 +25,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html {
-    font-size: 62.5%;
-}
+html { font-size: 62.5%; }
 
 body {
     width: 100%;
@@ -112,11 +110,7 @@ nav a.activo {
         background-color: var(--rosa-claro);
     }
     nav.active { display: block; }
-    nav a {
-        display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
-    }
+    nav a { display: block; font-size: 2rem; margin: 3rem 0; }
 }
 
 /* =========================================================
@@ -124,7 +118,7 @@ nav a.activo {
    ========================================================= */
 section {
     min-height: 100vh;
-    padding: 8rem 9% 5rem; /* margen superior extra para que no tape el header */
+    padding: 8rem 9% 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -179,18 +173,32 @@ section {
     box-shadow: 0 8px 30px rgba(138, 63, 82, 0.5);
 }
 
-.inicio-content h1 {
-    font-size: 4rem;
-    font-family: 'Parisienne', cursive;
-    color: var(--rosa-fuerte);
-    margin-bottom: 1rem;
+/* Tipografías sección inicio */
+.inicio-content h1 { 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 4rem; 
+    color: var(--rosa-fuerte); 
+    margin-bottom: 1rem; 
 }
 
-.inicio-content h3 {
-    font-size: 2rem;
-    font-family: 'Parisienne', cursive;
-    color: var(--rosa-fuerte);
-    margin-bottom: 1rem;
+.inicio-content h1 span { 
+    font-family: 'Parisienne', cursive; 
+    font-style: italic; 
+    font-weight: 600; 
+    color: var(--rosa-principal); 
+}
+
+.inicio-content h3 { 
+    font-family: 'Poppins', sans-serif; 
+    font-size: 2rem; 
+    color: var(--rosa-fuerte); 
+    margin-bottom: 1rem; 
+}
+
+.inicio-content h3 span { 
+    font-family: 'Parisienne', cursive; 
+    font-style: italic; 
+    color: var(--rosa-principal); 
 }
 
 .typing-text {
@@ -201,145 +209,47 @@ section {
     animation: typing 4s steps(40, end), blink 0.8s step-end infinite;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to   { width: 100%; }
-}
-@keyframes blink {
-    0%,100% { border-color: transparent; }
-    50%     { border-color: var(--rosa-fuerte); }
-}
+@keyframes typing { from { width: 0; } to { width: 100%; } }
+@keyframes blink { 0%,100% { border-color: transparent; } 50% { border-color: var(--rosa-fuerte); } }
 
-.inicio-content p {
-    font-size: 1.6rem;
-    color: var(--rosa-fuerte);
-}
+.inicio-content p { font-size: 1.6rem; color: var(--rosa-fuerte); }
 
-.inicio-content span {
-    color: var(--rosa-principal);
-    font-weight: 600;
-}
+/* Social icons */
+.social-icons { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 2rem; }
+.social-icons a { width: 4rem; height: 4rem; border: 0.2rem solid var(--rosa-principal); font-size: 2rem; border-radius: 50%; color: var(--rosa-fuerte); transition: 0.3s ease; display: flex; align-items: center; justify-content: center; }
+.social-icons a:hover { transform: scale(1.2) translateY(-3px); color: var(--rosa-claro); background: linear-gradient(135deg, var(--rosa-principal), var(--lavanda)); box-shadow: 0 0 20px rgba(230,164,180,0.4); }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-.social-icons a {
-    width: 4rem; height: 4rem;
-    border: 0.2rem solid var(--rosa-principal);
-    font-size: 2rem;
-    border-radius: 50%;
-    color: var(--rosa-fuerte);
-    transition: 0.3s ease;
-    display: flex; align-items: center; justify-content: center;
-}
-.social-icons a:hover {
-    transform: scale(1.2) translateY(-3px);
-    color: var(--rosa-claro);
-    background: linear-gradient(135deg, var(--rosa-principal), var(--lavanda));
-    box-shadow: 0 0 20px rgba(230,164,180,0.4);
-}
-
-.btn {
-    padding: 1rem 2.5rem;
-    background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-claro));
-    border-radius: 2rem;
-    font-size: 1.6rem;
-    color: var(--rosa-fuerte);
-    font-weight: 600;
-    border: 2px solid var(--rosa-fuerte);
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-.btn:hover {
-    transform: scale(1.08);
-    background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-principal));
-    box-shadow: 0 8px 25px rgba(138,63,82,0.35);
-}
+/* Botón */
+.btn { padding: 1rem 2.5rem; background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-claro)); border-radius: 2rem; font-size: 1.6rem; color: var(--rosa-fuerte); font-weight: 600; border: 2px solid var(--rosa-fuerte); transition: 0.3s ease; cursor: pointer; }
+.btn:hover { transform: scale(1.08); background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-principal)); box-shadow: 0 8px 25px rgba(138,63,82,0.35); }
 
 /* =========================================================
    SECCIÓN HOBBIES
    ========================================================= */
-.hobbies {
-    background: rgba(220, 198, 224, 0.4);
-    border-radius: 2rem;
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 4rem 2rem;
-}
-.hobbies-content p,
-.hobbies-content ul {
-    font-size: 1.8rem;
-    color: var(--rosa-fuerte);
-}
-.hobbies-content ul {
-    list-style: circle;
-    margin-top: 1.5rem;
-    padding-left: 2rem;
-}
-.hobbies-content li {
-    margin-bottom: 1rem;
-}
+.hobbies { background: rgba(220, 198, 224, 0.4); border-radius: 2rem; max-width: 900px; margin: 3rem auto; padding: 4rem 2rem; }
+.hobbies-content p, .hobbies-content ul { font-size: 1.8rem; color: var(--rosa-fuerte); }
+.hobbies-content ul { list-style: circle; margin-top: 1.5rem; padding-left: 2rem; }
+.hobbies-content li { margin-bottom: 1rem; }
 
 /* =========================================================
    SECCIÓN HORARIO
    ========================================================= */
-.horario {
-    background: rgba(255, 240, 245, 0.55);
-    border-radius: 2rem;
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 4rem 2rem;
-}
-.horario-content p {
-    font-size: 1.8rem;
-    color: var(--rosa-fuerte);
-    margin-bottom: 2rem;
-}
-.horario-content table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 1.6rem;
-    color: var(--rosa-fuerte);
-}
-.horario-content th,
-.horario-content td {
-    border: 1px solid var(--rosa-principal);
-    padding: 1rem;
-    text-align: center;
-}
-.horario-content th {
-    background: var(--lavanda);
-    color: var(--rosa-fuerte);
-}
+.horario { background: rgba(255, 240, 245, 0.55); border-radius: 2rem; max-width: 900px; margin: 3rem auto; padding: 4rem 2rem; }
+.horario-content p { font-size: 1.8rem; color: var(--rosa-fuerte); margin-bottom: 2rem; }
+.horario-content table { width: 100%; border-collapse: collapse; font-size: 1.6rem; color: var(--rosa-fuerte); }
+.horario-content th, .horario-content td { border: 1px solid var(--rosa-principal); padding: 1rem; text-align: center; }
+.horario-content th { background: var(--lavanda); color: var(--rosa-fuerte); }
 
 /* =========================================================
    SECCIÓN EXTRAS
    ========================================================= */
-.extras {
-    background: rgba(230, 164, 180, 0.4);
-    border-radius: 2rem;
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 4rem 2rem;
-}
-.extras-content p {
-    font-size: 1.8rem;
-    color: var(--rosa-fuerte);
-    line-height: 1.6;
-}
+.extras { background: rgba(230, 164, 180, 0.4); border-radius: 2rem; max-width: 900px; margin: 3rem auto; padding: 4rem 2rem; }
+.extras-content p { font-size: 1.8rem; color: var(--rosa-fuerte); line-height: 1.6; }
 
 /* =========================================================
    FOOTER
    ========================================================= */
-footer {
-    text-align: center;
-    padding: 2rem;
-    font-size: 1.4rem;
-    color: var(--rosa-fuerte);
-}
+footer { text-align: center; padding: 2rem; font-size: 1.4rem; color: var(--rosa-fuerte); }
 
 /* =========================================================
    RESPONSIVE
@@ -353,11 +263,6 @@ footer {
     .inicio-img img { width: 70vw; }
     .inicio-content h1 { font-size: 2.5rem; }
     .inicio-content h3 { font-size: 1.6rem; }
-    .social-icons a {
-        width: 3.5rem; height: 3.5rem; font-size: 1.5rem;
-    }
-    .btn {
-        font-size: 1.4rem;
-        padding: 0.8rem 2rem;
-    }
+    .social-icons a { width: 3.5rem; height: 3.5rem; font-size: 1.5rem; }
+    .btn { font-size: 1.4rem; padding: 0.8rem 2rem; }
 }
