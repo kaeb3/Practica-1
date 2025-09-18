@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+/* ---------------- VARIABLES ---------------- */
+:root {
+    --rosa-claro: #FFF0F5;
+    --rosa-principal: #E6A4B4;
+    --rosa-fuerte: #8A3F52;
+    --lavanda: #DCC6E0;
+    --blanco-transparente: rgba(255, 255, 255, 0.35);
+}
+
+/* ---------------- RESET ---------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: url("https://e0.pxfuel.com/wallpapers/780/354/desktop-wallpaper-kelbi-%E2%99%A1-coquette-thumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: var(--rosa-principal);
+}
+
+/* Overlay con degradado pastel */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,240,245,0.35), rgba(220,198,224,0.35));
+    z-index: -1;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+    color: var(--rosa-fuerte);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.15);
+    color: var(--rosa-principal);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: var(--rosa-principal);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.activo {
+    color: var(--rosa-fuerte);
+    border-bottom: 3px solid var(--rosa-fuerte);
+}
+
+@media (max-width:995px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid var(--rosa-fuerte);
+        border-bottom: 3px solid var(--rosa-fuerte);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem;
+        background-color: var(--rosa-claro);
+        border-top: 0.1rem solid rgba(0,0,0,0.1);
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    nav a:hover,
+    nav a.activo {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid var(--rosa-fuerte);
+    }
+}
+
+/* ---------------- SECTION INICIO ---------------- */
+section {
+    min-height: 100vh;
+    padding: 5rem 9%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+/* ---------------- RECUADRO COQUETTE ---------------- */
+.inicio {
+    background-color: rgba(255, 240, 245, 0.6);
+    border-radius: 2rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 20px rgba(138, 63, 82, 0.2);
+    max-width: 800px;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transition: all 0.5s ease;
+}
+
+.inicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(138, 63, 82, 0.3);
+}
+
+/* Animación fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Imagen circular */
+.inicio-img img {
+    width: 32vw;
+    max-width: 280px;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(138, 63, 82, 0.35);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.inicio-img img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(138, 63, 82, 0.5);
+}
+
+/* Contenido de texto */
+.inicio-contenido h1 {
+    font-size: 4rem;
+    font-family: 'Parisienne', cursive;
+    color: var(--rosa-fuerte);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.inicio-contenido h3 {
+    font-size: 2rem;
+    font-family: 'Parisienne', cursive;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: var(--rosa-fuerte);
+}
+
+/* Efecto typing animado */
+.typing-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.2rem solid var(--rosa-fuerte);
+    animation: typing 4s steps(40, end), blink 0.8s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: var(--rosa-fuerte); }
+}
+
+.inicio-contenido p {
+    font-size: 1.6rem;
+    color: var(--rosa-fuerte);
+}
+
+/* Span destacado */
+.inicio-contenido span {
+    color: var(--rosa-principal);
+    font-weight: 600;
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid var(--rosa-principal);
+    font-size: 2rem;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    color: var(--rosa-fuerte);
+}
+
+.social-icons a:hover {
+    transform: scale(1.2) translateY(-3px);
+    color: var(--rosa-claro);
+    background: linear-gradient(135deg, var(--rosa-principal), var(--lavanda));
+    box-shadow: 0 0 20px rgba(230,164,180,0.4);
+}
+
+/* Botón */
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-claro));
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    color: var(--rosa-fuerte);
+    font-weight: 600;
+    border: 2px solid var(--rosa-fuerte);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-principal));
+    box-shadow: 0 8px 25px rgba(138,63,82,0.35);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width:1000px){
+    .inicio-img img {
+        width: 50vw;
+    }
+    .inicio-contenido h1 {
+        font-size: 3rem;
+    }
+    .inicio-contenido h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width:600px){
+    .inicio-img img {
+        width: 70vw;
+    }
+    .inicio-contenido h1 {
+        font-size: 2.5rem;
+    }
+    .inicio-contenido h3 {
+        font-size: 1.6rem;
+    }
+    .social-icons a {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.5rem;
+    }
+    .btn {
+        font-size: 1.4rem;
+        padding: 0.8rem 2rem;
+    }
+}
