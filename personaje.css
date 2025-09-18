@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+:root {
+    --rosa-claro: #FFF0F5;
+    --rosa-principal: #E6A4B4;
+    --rosa-fuerte: #8A3F52;
+    --lavanda: #DCC6E0;
+    --blanco-transparente: rgba(255, 255, 255, 0.35);
+}
+
+/* RESETEO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html { font-size: 62.5%; }
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: url("https://e0.pxfuel.com/wallpapers/780/354/desktop-wallpaper-kelbi-%E2%99%A1-coquette-thumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--rosa-principal);
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(255,240,245,0.35), rgba(220,198,224,0.35));
+    z-index: -1;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+header .logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--rosa-fuerte);
+}
+
+/* SECCIÓN PERSONA */
+.persona-admirada {
+    background-color: rgba(255,240,245,0.6);
+    border-radius: 2rem;
+    padding: 3rem 2rem;
+    box-shadow: 0 8px 20px rgba(138,63,82,0.2);
+    max-width: 800px;
+    margin: 5rem auto;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+.section-title h2 {
+    font-family: 'Parisienne', cursive;
+    color: var(--rosa-fuerte);
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.persona-admirada img {
+    width: 32vw;
+    max-width: 280px;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(138,63,82,0.35);
+    transition: 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.persona-admirada img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(138,63,82,0.5);
+}
+
+.persona-admirada p {
+    font-size: 1.6rem;
+    color: var(--rosa-fuerte);
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.btn {
+    padding: 1rem 2.5rem;
+    background: linear-gradient(135deg, var(--rosa-principal), var(--rosa-claro));
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    color: var(--rosa-fuerte);
+    font-weight: 600;
+    border: 2px solid var(--rosa-fuerte);
+    transition: 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    background: linear-gradient(135deg, var(--rosa-claro), var(--rosa-principal));
+    box-shadow: 0 8px 25px rgba(138,63,82,0.35);
+}
+
+/* FOOTER */
+footer { 
+    text-align: center; 
+    padding: 2rem; 
+    font-size: 1.4rem; 
+    color: var(--rosa-fuerte); 
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width:1000px){
+    .persona-admirada img { width: 50vw; }
+    .section-title h2 { font-size: 3rem; }
+    .persona-admirada p { font-size: 1.4rem; }
+}
+@media (max-width:600px){
+    .persona-admirada img { width: 70vw; }
+    .section-title h2 { font-size: 2.5rem; }
+    .persona-admirada p { font-size: 1.2rem; }
+    .btn { font-size: 1.4rem; padding: 0.8rem 2rem; }
+}
