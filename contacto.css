@@ -1,0 +1,97 @@
+
+:root {
+    --rosa-claro: #FFF0F5;
+    --rosa-principal: #E6A4B4;
+    --rosa-fuerte: #8A3F52;
+    --lavanda: #DCC6E0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--rosa-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.suggestion-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(138, 63, 82, 0.2);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+}
+
+.suggestion-form h2 {
+    font-family: 'Parisienne', cursive;
+    font-size: 3rem;
+    color: var(--rosa-fuerte);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.suggestion-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+    color: var(--rosa-fuerte);
+}
+
+.suggestion-form input[type="text"],
+.suggestion-form input[type="email"],
+.suggestion-form select,
+.suggestion-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--lavanda);
+    font-size: 1.4rem;
+}
+
+.suggestion-form input[type="text"]:focus,
+.suggestion-form input[type="email"]:focus,
+.suggestion-form select:focus,
+.suggestion-form textarea:focus {
+    border-color: var(--rosa-principal);
+    box-shadow: 0 0 5px var(--rosa-principal);
+}
+
+.suggestion-form input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, var(--rosa-principal), var(--lavanda));
+    color: var(--rosa-fuerte);
+    font-weight: 600;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.suggestion-form input[type="submit"]:hover {
+    background: linear-gradient(135deg, var(--lavanda), var(--rosa-principal));
+}
+
+/* Mensaje de agradecimiento oculto por defecto */
+.thank-you {
+    display: none;
+    margin-top: 15px;
+    text-align: center;
+    color: var(--rosa-fuerte);
+    font-weight: 500;
+    font-size: 1.6rem;
+    font-family: 'Parisienne', cursive;
+}
