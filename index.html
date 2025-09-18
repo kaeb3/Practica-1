@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <title>♡ Sobre mí ♡</title>
 </head>
 <body>
@@ -10,20 +12,23 @@
         <a href="#" class="logo">Nelly</a>
 
         <nav>
-            <a href="#" class="active"> Inicio </a>
-            <a href="#" >Hobbies</a>
-            <a href="#" >Horario</a>
-            <a href="#" >Extras</a>
+            <a href="#inicio" class="active">Inicio</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#horario">Horario</a>
+            <a href="#extras">Extras</a>
         </nav>
     </header>
-    <section class="inicio">
+
+    <!-- ===== INICIO ===== -->
+    <section id="inicio" class="page inicio">
         <div class="inicio-img">
             <img src="https://i.pinimg.com/736x/46/3f/b0/463fb09b16e45140a55ee901006ff678.jpg" alt="">
         </div>
         <div class="inicio-content">
             <h1>Hola, yo soy <span>Nelly</span></h1>
-            <h3 class="typing-text">Estoy estudiando la carrera de  <span>Ingeniería en Computación</span></h3>
-            <p>Actualmente estoy en 4to semestre, y en esta página encontraras algunas cosas sobre mí.</p>
+            <h3 class="typing-text">Estoy estudiando la carrera de <span>Ingeniería en Computación</span></h3>
+            <p>Actualmente estoy en 4to semestre, y en esta página encontrarás algunas cosas sobre mí.</p>
+            <br>
             <div class="social-icons">
                 <a href="#"><i class="fa-brands fa-github"></i></a>
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
@@ -33,123 +38,77 @@
             <a href="#" class="btn">Sígueme</a>
         </div>
     </section>
-     <section id="hobbies" class="hobbies">
+
+    <!-- ===== HOBBIES ===== -->
+    <section id="hobbies" class="page hobbies">
         <div class="section-title">
             <h2>Mis Hobbies</h2>
         </div>
         <div class="hobbies-content">
-            <p>En este apartado encontraras algunos de mis hobbies y como fue que descubrí porque me gustan.</p>
-
+            <p>En este apartado encontrarás algunos de mis hobbies y cómo fue que descubrí por qué me gustan.</p>
+            <br>
             <ul><b>Hobbies o intereses</b>
-        <li>Dibujar/Pintar</li>
-        <p>Este hobbie lo adquirí aproximadamente a los 6 o 7 aos, viendo la caricatura "My Little Pony".
-             Me enamore tanto de los dibujos que comence a dibujarlos a mi manera, y fue asi como fue creciendo este interes.
-            De ahí pase a más series y demas jajaja.</p>
-        <li>Leer</li>
-        <p>Este hobbie lo aduirí a los 13 años, cuando descubrí una plataform de libros digitales.
-            Ahí podías subir tus propias historias y apoyar a escritores principiantes, descubrí muchas historias interesantes y pues mi gusto por leer se fue incrementando.
-        </p>
-        <li>Escuchar música</li>
-        <p>Bueno, sinceramente, yo creo que desde siempre me ha encantado la música, no puedo vivir sin ella.</p>
-        <li>Dormir</li>
-        <p>Sucede lo mismo que con la música.</p>
-        <li>Ver películas con mi familia</li>
-        <p>Jajaja, esto me da mucha risa, porque normalmente al principio de cada película mi mamá me obliga a sentarme a verla con ella, después quedo enganchada con la trama y al final mi mamá y yo terminamos comentando todo sobre la pelicula, que nos gusto
-            que no y críticas, muchaaaaaas críticas</p>
-    </ul>
+                <br>
+                <li><b><i>Dibujar/Pintar</i></b></li>
+                <p>Este hobby lo adquirí aproximadamente a los 6 o 7 años, viendo la caricatura "My Little Pony". Me enamoré tanto de los dibujos que comencé a dibujarlos a mi manera, y fue así como fue creciendo este interés. De ahí pasé a más series y demás jajaja.</p>
+                <br>
+                <li><b><i>Leer</i></b></li>
+                <p>Este hobby lo adquirí a los 13 años, cuando descubrí una plataforma de libros digitales. Ahí podías subir tus propias historias y apoyar a escritores principiantes, descubrí muchas historias interesantes y mi gusto por leer se fue incrementando.</p>
+                <br>
+                <li><b><i>Escuchar música</i></b></li>
+                <p>Sinceramente, desde siempre me ha encantado la música; no puedo vivir sin ella.</p>
+                <br>
+                <li><b><i>Dormir</i></b></li>
+                <p>Sucede lo mismo que con la música.</p>
+                <br>
+                <li><b><i>Ver películas con mi familia</i></b></li>
+                <p>Esto me da mucha risa, porque normalmente al principio de cada película mi mamá me obliga a sentarme a verla con ella. Después quedo enganchada con la trama y al final mi mamá y yo terminamos comentando todo sobre la película: lo que nos gustó, lo que no, y críticas… muchísimas críticas.</p>
+            </ul>
         </div>
     </section>
-    <!-- ===== Sección Horario ===== -->
-    <section id="horario" class="horario">
+
+    <!-- ===== HORARIO ===== -->
+    <section id="horario" class="page horario">
         <div class="section-title">
             <h2>Mi Horario</h2>
         </div>
         <div class="horario-content">
             <p>Este es el horario que llevo actualmente en este semestre:</p>
-
             <table border="1" cellpadding="5" cellspacing="0">
-    <thead>
-        <tr>
-            <th>Hora</th>
-            <th>Lunes</th>
-            <th>Martes</th>
-            <th>Miercoles</th>
-            <th>Jueves</th>
-            <th>Viernes</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>7 - 9</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>9 - 11</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>11 - 13</td>
-            <td>x</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>13 - 15</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-        </tr>
-        <tr>
-            <td>15 - 17</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-        </tr>
-        <tr>
-            <td>17 - 19</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-            <td>x</td>
-        </tr>
-        <tr>
-            <td>19 - 21</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>7 - 9</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>9 - 11</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>11 - 13</td><td>x</td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>13 - 15</td><td>x</td><td>x</td><td>x</td><td>x</td><td>x</td></tr>
+                    <tr><td>15 - 17</td><td>x</td><td>x</td><td>x</td><td>x</td><td>x</td></tr>
+                    <tr><td>17 - 19</td><td>x</td><td>x</td><td>x</td><td>x</td><td>x</td></tr>
+                    <tr><td>19 - 21</td><td></td><td></td><td></td><td></td><td></td></tr>
+                </tbody>
+            </table>
         </div>
     </section>
-    <!-- ===== Sección Extras ===== -->
-    <section id="extras" class="extras">
+
+    <!-- ===== EXTRAS ===== -->
+    <section id="extras" class="page extras">
         <div class="section-title">
             <h2>Extras</h2>
         </div>
         <div class="extras-content">
-            <p>En este apartado escribire algunas anecdotas tragicas o divertidas que me han ocurrido a lo largo de mi vida.</p>
+            <p>En este apartado escribiré algunas anécdotas trágicas o divertidas que me han ocurrido a lo largo de mi vida.</p>
         </div>
     </section>
 
-    <!-- ===== Pie de página ===== -->
+    <!-- ===== PIE DE PÁGINA ===== -->
     <footer>
         <p>&copy; 2025 Nelly. Todos los derechos reservados.</p>
     </footer>
